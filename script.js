@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const itemInput = document.getElementById('item');
     const categoryInput = document.getElementById('category');
+    const priceInput = document.getElementById('price');
     const quantityInput = document.getElementById('quantity');
     const addBtn = document.getElementById('addBtn');
   
@@ -11,15 +12,17 @@ document.addEventListener('DOMContentLoaded', () => {
     function addItem() {
       const item = itemInput.value.trim();
       const category = categoryInput.value.trim();
+      const price = priceInput.value.trim();
       const quantity = quantityInput.value.trim();
   
-      if (item === '' || category === '' || quantity === '') {
+      if (item === '' || category === '' || price === '' || quantity === '') {
         return;
       }
   
       const groceryItem = {
         item,
         category,
+        price,
         quantity
       };
   
@@ -46,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function appendItemToList(item) {
       const categoryList = document.getElementById(`${item.category.toLowerCase()}List`);
       const listItem = document.createElement('li');
-      listItem.textContent = ` ${item.item} - ${item.quantity}`;
+      listItem.textContent = `${item.item} - $${item.price} - quantity: ${item.quantity}`;
       categoryList.appendChild(listItem);
     }
   
@@ -57,4 +60,4 @@ document.addEventListener('DOMContentLoaded', () => {
       quantityInput.value = '';
     }
   });
-  
+      
