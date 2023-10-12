@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function addItem() {
       const item = itemInput.value.trim();
       const category = categoryInput.value.trim();
-      const price = priceInput.value.trim();
       const quantity = quantityInput.value.trim();
   
       if (item === '' || category === '' || quantity === '') {
@@ -21,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const groceryItem = {
         item,
         category,
-        price,
         quantity
       };
   
