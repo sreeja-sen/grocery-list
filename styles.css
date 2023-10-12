@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  .form {
+    margin-bottom: 20px;
+  }
+  
+  input, button {
+    margin-right: 10px;
+  }
+  
+  .list h2 {
+    margin-top: 20px;
+  }
+  
+  .list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .list li {
+    margin-bottom: 5px;
+  }
+  
+  #fruitsList li {
+    color: green;
+  }
+  
+  #vegetablesList li {
+    color: red;
+  }
+  
+  #othersList li {
+    color: blue;
+  }
+  
